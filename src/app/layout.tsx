@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Source_Code_Pro } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/components/shared/Header";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+
+import "./globals.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -37,7 +37,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           <main
           //  className="min-h-screen"
           >

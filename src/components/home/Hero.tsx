@@ -13,12 +13,12 @@ const Hero = () => {
         </span>
       </h1>
 
-      <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+      <p className="text-sm md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
         Get instant access to AI-powered health insights, symptom analysis, and
         personalized medical guidance. Your intelligent companion for better
         health decisions.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="flex flex-col sm:flex-row w-3/4 md:w-full gap-4 justify-center mx-auto">
         <GetStartButton targetId="services" className="text-lg px-8 py-6">
           Get Started
           <ArrowRight className="ml-2 h-5 w-5" />
