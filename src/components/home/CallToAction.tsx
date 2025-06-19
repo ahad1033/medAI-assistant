@@ -1,13 +1,16 @@
 import { ArrowRight } from "lucide-react";
+
 import { Button } from "../ui/button";
+
+import AnimatedSection from "../animation/AnimatedSection";
 
 const CallToAction = () => {
   return (
-    <div className="text-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12 text-white mb-8">
+    <AnimatedSection className="text-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12 text-white mb-8">
       <h2 className="text-3xl font-bold mb-4">
         Ready to Take Control of Your Health?
       </h2>
-      <p className="text-xl mb-8 opacity-90">
+      <p className="text-sm md:text-xl mb-8 opacity-90">
         Join thousands of users who trust MedAI Assistant for their health
         guidance
       </p>
@@ -24,7 +27,7 @@ const CallToAction = () => {
           Schedule Demo
         </Button>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

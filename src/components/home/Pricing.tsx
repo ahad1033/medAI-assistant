@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/card";
 import { Button } from "../ui/button";
 
+import AnimatedSection from "../animation/AnimatedSection";
+
 const pricingPlans = [
   {
     name: "Basic",
@@ -55,7 +57,7 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <div className="mb-16">
+    <AnimatedSection className="mb-16">
       <h2 className="text-3xl font-bold text-center mb-4">Choose Your Plan</h2>
       <p className="text-xl text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
         Select the perfect plan for your health needs. All plans include our
@@ -65,13 +67,13 @@ const Pricing = () => {
         {pricingPlans.map((plan, index) => (
           <Card
             key={index}
-            className={`relative ${
+            className={`relative duration-300 hover:shadow-lg hover:-translate-y-1 ${
               plan.popular ? "border-primary shadow-lg scale-105" : ""
             }`}
           >
             {plan.popular && (
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm sm:text-xs font-medium">
                   Most Popular
                 </span>
               </div>
@@ -107,7 +109,7 @@ const Pricing = () => {
           </Card>
         ))}
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

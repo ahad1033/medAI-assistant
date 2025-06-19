@@ -1,8 +1,9 @@
 import React from "react";
+import AnimatedSection from "../animation/AnimatedSection";
 
 const Stats = () => {
   return (
-    <div className="mb-16 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 rounded-2xl p-8">
+    <AnimatedSection className="mb-16 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-950 dark:to-purple-950 rounded-2xl p-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
         <div>
           <div className="text-3xl font-bold text-blue-600 mb-2">50K+</div>
@@ -21,7 +22,7 @@ const Stats = () => {
           <div className="text-muted-foreground">User Satisfaction</div>
         </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

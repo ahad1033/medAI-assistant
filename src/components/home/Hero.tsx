@@ -2,10 +2,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 
 import GetStartButton from "./GetStartButton";
+import AnimatedSection from "../animation/AnimatedSection";
 
 const Hero = () => {
   return (
-    <div className="text-center mb-16">
+    <AnimatedSection className="text-center mb-16">
       <h1 className="text-4xl md:text-7xl font-bold text-foreground mb-8">
         Your AI-Powered{" "}
         <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -28,7 +29,7 @@ const Hero = () => {
           Learn More
         </Button>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

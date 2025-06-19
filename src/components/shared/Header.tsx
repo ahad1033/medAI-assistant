@@ -1,15 +1,17 @@
 "use client";
 
 import Link from "next/link";
+
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
+import { Heart, Sun, Moon, Monitor } from "lucide-react";
+
 import {
   DropdownMenu,
   DropdownMenuItem,
   DropdownMenuTrigger,
   DropdownMenuContent,
 } from "@/components/ui/dropdown-menu";
-import { Heart, Sun, Moon, Monitor } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   const { setTheme } = useTheme();
@@ -27,19 +29,19 @@ export function Header() {
         <nav className="hidden md:flex items-center space-x-6">
           <Link
             href="/"
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium hover:text-blue-500 transition-colors"
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium hover:text-blue-500 transition-colors"
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-medium hover:text-primary transition-colors"
+            className="text-sm font-medium hover:text-blue-500 transition-colors"
           >
             Contact
           </Link>

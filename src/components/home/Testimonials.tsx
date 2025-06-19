@@ -1,6 +1,8 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+import AnimatedSection from "../animation/AnimatedSection";
+
 const testimonials = [
   {
     name: "Sarah Kabir",
@@ -26,13 +28,17 @@ const testimonials = [
 ];
 const Testimonials = () => {
   return (
-    <div className="mb-16">
+    <AnimatedSection className="mb-16">
       <h2 className="text-3xl font-bold text-center mb-12">
         What Our Users Say
       </h2>
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {testimonials.map((testimonial, index) => (
-          <Card key={index} className="p-6">
+          <Card
+            key={index}
+            className="p-6 duration-300 hover:shadow-lg hover:-translate-y-1"
+          >
             <CardContent className="p-0">
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -55,7 +61,7 @@ const Testimonials = () => {
           </Card>
         ))}
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 
