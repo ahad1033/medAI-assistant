@@ -1,7 +1,7 @@
 'use client';
 
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import { getServiceConfig } from '@/lib/service-config';
