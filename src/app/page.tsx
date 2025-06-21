@@ -5,7 +5,7 @@ import Features from "@/components/home/Features";
 import Services from "@/components/home/Services";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
-import CallToAction from "@/components/home/CallToAction";
+import CallToActionBlock from "@/components/shared/CallToAction";
 
 import { Header } from "@/components/shared/Header";
 import { Footer } from "@/components/shared/Footer";
@@ -30,7 +30,13 @@ export default function HomePage() {
 
         <Testimonials />
 
-        <CallToAction />
+        <CallToActionBlock
+          title="Ready to Take Control of Your Health?"
+          description="Join thousands of users who trust MedAI Assistant for their health
+        guidance"
+          primaryBtn={{ label: "Start Free Trial" }}
+          secondaryBtn={{ label: "Schedule Demo" }}
+        />
       </div>
 
       <Footer />
