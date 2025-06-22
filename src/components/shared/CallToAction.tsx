@@ -12,21 +12,23 @@ type CTAButton = {
   targetId?: string;
 };
 
-interface CallToActionBlockProps {
+interface CallToActionProps {
   title: string;
   description?: string;
-  primaryBtn: CTAButton;
-  secondaryBtn: CTAButton;
+  primaryBtn?: CTAButton;
+  secondaryBtn?: CTAButton;
   className?: string;
+  bcClass?: string;
 }
 
-const CallToActionBlock = ({
+const CallToAction = ({
   title,
   description,
   primaryBtn,
   secondaryBtn,
   className = "",
-}: CallToActionBlockProps) => {
+  bcClass = "",
+}: CallToActionProps) => {
   const renderCTAButton = (btn: CTAButton, isPrimary: boolean) => {
     const variant = isPrimary ? "secondary" : "outline";
     const classes = `text-lg px-8 py-6 ${
@@ -91,19 +93,23 @@ const CallToActionBlock = ({
 
   return (
     <AnimatedSection
-      className={`text-center bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12 text-white ${className}`}
+      className={`text-center bg-gradient-to-r  rounded-2xl p-12 text-white ${className} ${
+        bcClass ? bcClass : "from-blue-500 to-purple-600"
+      }`}
     >
       <h2 className="text-3xl font-bold mb-4">{title}</h2>
       {description && (
         <p className="text-sm md:text-xl mb-8 opacity-90">{description}</p>
       )}
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        {renderCTAButton(primaryBtn, true)}
-        {renderCTAButton(secondaryBtn, false)}
-      </div>
+      {primaryBtn && secondaryBtn && (
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {renderCTAButton(primaryBtn, true)}
+          {renderCTAButton(secondaryBtn, false)}
+        </div>
+      )}
     </AnimatedSection>
   );
 };
 
-export default CallToActionBlock;
+export default CallToAction;
