@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { ArrowRight, Award, Stethoscope, Target, Users } from "lucide-react";
 
 import { Button } from "../ui/button";
+
 import AnimatedSection from "../animation/AnimatedSection";
 
 const Mission = () => {
@@ -21,16 +23,21 @@ const Mission = () => {
             decisions and know when to seek professional care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Learn More
-            </Button>
+            <Link href="/#services">
+              <Button size="lg">
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+
+            <Link href="/contact">
+              <Button variant="outline" size="lg">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
-        
+
         <div className="relative">
           <div className="bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 rounded-2xl p-8">
             <div className="grid grid-cols-2 gap-6">
